@@ -87,3 +87,16 @@ obj.forEach((value) => {
   rst.d.push(Object.values(value))
 })
 ```
+
+### Bonus: Parallel and Concurrency (10)
+##### Please explain Parallel and Concurrency to non-technical person, without technical terms. Let’s say you explain to non developers. Tips, you can use diagrams, pictures, or story as long as non-technical persons understand.
+#### Answer:
+##### Concurrency
+Concurrency mean ability of a program to handle multiple request.
+###### Make it easy to understand
+Let's think Concurrency as an employee, when he's boss give him multiple jobs at the same time, he has ability to grab and stack all of it, but when he's do that he will confusing and tired because all of that jobs, and he will finish the job one by one, so that will take long time depend on how much the jobs.
+
+##### Parallelism
+Parallelism mean ability of a program to handle multiple request on the same time.
+###### Make it easy to understand
+Let's use the same analogy as concurrency, on parrallelism we have more than one employee, so they can handle and finish the jobs more faster.
