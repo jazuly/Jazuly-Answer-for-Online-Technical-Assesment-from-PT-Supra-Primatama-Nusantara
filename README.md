@@ -30,10 +30,10 @@ function isPrime($n) {
 } 
   
 function printPrime($n) {
-	if ($n < 0) {
-		echo 'Only accepted Positif Value';
-		return false;
-	}
+    if ($n < 0) {
+	echo 'Only accepted Positif Value';
+	return false;
+    }
 
     for ($i = 2; $i <= $n; $i++)  
     { 
