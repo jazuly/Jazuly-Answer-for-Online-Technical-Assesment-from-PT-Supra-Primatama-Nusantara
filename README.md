@@ -14,6 +14,8 @@ for file in /tmp/mig33/inner.folder/*.txt; do mv "$file" "${file%.txt}.dat"; don
 
 ### SQL (15)
 ##### 1) Provide a mysql select statement to return the following resultset structure:
+`day; num_pos_scores; num_neg_scores`
+##### Where num_pos_scores and num_neg_scores are the total number of positive score rows, and negative score rows in the table, for individual days between March 1st, 2011 and April 30th, 2011, both days inclusive.
 #### Answer:
 ```MySQL
 SELECT 'day',
@@ -23,13 +25,13 @@ SELECT 'day',
 	GROUP BY num_pos_scores AND num_neg_scores
 ```
 
-##### 2)
+##### 2) Provide a mysql select statement that returns all the days between January 1st, 2011 and June 30th, 2011, both days inclusive, where there were no negative scores.
 #### Answer:
 ```MySQL
 SELECT *
     FROM assessments
 	WHERE score >= 0
-	AND date BETWEEN '2011-01-01' AND '2011-04-30'
+	AND date BETWEEN '2011-01-01' AND '2011-06-30'
 ```
 
 ### NodeJS, Python, Golang, or PHP (20)
