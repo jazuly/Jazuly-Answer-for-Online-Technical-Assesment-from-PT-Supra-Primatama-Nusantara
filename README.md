@@ -87,6 +87,21 @@ obj.forEach((value) => {
   rst.d.push(Object.values(value))
 })
 ```
+### Algorithmic (25)
+##### In the language of your choice, write a function which, taking a positive integer n as input, finds all sets of numbers that sum up to n.
+#### Answer:
+###### NB: Note the right answer but better than nothing.
+```Javascript
+const subsetSum = (numbers, target, partial = [], sum = 0) => {
+  if (sum < target)
+    numbers.forEach((num, i) =>
+      subsetSum(numbers.slice(i + 1), target, partial.concat([num]), sum + num));
+  else if (sum == target)
+    console.log('sum(%s) = %s', partial.join(), target);
+}
+
+subsetSum([1,2,3,4,5,6,7,8,9], 4);
+```
 
 ### Bonus: Parallel and Concurrency (10)
 ##### Please explain Parallel and Concurrency to non-technical person, without technical terms. Let’s say you explain to non developers. Tips, you can use diagrams, pictures, or story as long as non-technical persons understand.
@@ -94,9 +109,9 @@ obj.forEach((value) => {
 ##### Concurrency
 Concurrency mean ability of a program to handle multiple request.
 ###### Make it easy to understand
-Let's think Concurrency as an employee, when he's boss give him multiple jobs at the same time, he has ability to grab and stack all of it, but when he's do that he will confusing and tired because all of that jobs, and he will finish the job one by one, so that will take long time depend on how much the jobs.
+Let's think ***Concurrency*** as an employee, when he's boss give him multiple jobs at the same time, he has ability to grab and stack all of it, but when he's do that he will confusing and tired because all of that jobs, and he will finish the job one by one, so that will take long time depend on how much the jobs.
 
 ##### Parallelism
 Parallelism mean ability of a program to handle multiple request on the same time.
 ###### Make it easy to understand
-Let's use the same analogy as concurrency, on parrallelism we have more than one employees, so they can handle and finish the jobs more faster.
+Let's use the same analogy as ***concurrency***, on parrallelism we have more than one employees, so they can handle and finish the jobs more faster.
