@@ -57,13 +57,10 @@ printPrime(10);
 ```javascript
 let jsn = '[{"username":"ali","hair_color":"brown","height":1.2}, {"username":"marc","hair_color":"blue","height":1.4},{"username":"joe","hair_color":"brown","height":1.7},{"username":"zehua","hair_color":"black","height":1.8}]';
 let obj = JSON.parse(jsn);
-let key = null;
-let val = [];
+let rst = { h: null, d: [] };
 
 obj.forEach((value) => {
-  if (!key) key = Object.keys(value);
-  val.push(Object.values(value))
+  if (!rst.h) rst.h = Object.keys(value);
+  rst.d.push(Object.values(value))
 })
-
-let rst = { h: key, d: val };
 ```
