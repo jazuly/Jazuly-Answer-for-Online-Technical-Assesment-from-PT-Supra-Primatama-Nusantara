@@ -99,4 +99,4 @@ Let's think Concurrency as an employee, when he's boss give him multiple jobs at
 ##### Parallelism
 Parallelism mean ability of a program to handle multiple request on the same time.
 ###### Make it easy to understand
-Let's use the same analogy as concurrency, on parrallelism we have more than one employee, so they can handle and finish the jobs more faster.
+Let's use the same analogy as concurrency, on parrallelism we have more than one employees, so they can handle and finish the jobs more faster.
