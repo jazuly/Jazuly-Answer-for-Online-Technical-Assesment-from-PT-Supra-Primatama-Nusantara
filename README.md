@@ -18,8 +18,7 @@ for file in /tmp/mig33/inner.folder/*.txt; do mv "$file" "${file%.txt}.dat"; don
 ##### 1) Write a function which, taking in a positive integer n as input, returns an array of all primes lower than n.
 #### Answer:
 ```php
-function isPrime($n) 
-{ 
+function isPrime($n) { 
     if ($n <= 1) 
         return false; 
   
@@ -30,8 +29,12 @@ function isPrime($n)
     return true; 
 } 
   
-function printPrime($n) 
-{ 
+function printPrime($n) {
+	if ($n < 0) {
+		echo 'Only accepted Positif Value';
+		return false;
+	}
+
     for ($i = 2; $i <= $n; $i++)  
     { 
         if (isPrime($i)) 
@@ -39,7 +42,7 @@ function printPrime($n)
     } 
 }
 
-printPrime(10);
+printPrime(5);
 ```
 
 ### JavaScript (30)
