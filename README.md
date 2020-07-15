@@ -17,10 +17,19 @@ for file in /tmp/mig33/inner.folder/*.txt; do mv "$file" "${file%.txt}.dat"; don
 #### Answer:
 ```MySQL
 SELECT 'day',
-    (SELECT Count(*) FROM assessments WHERE score >= 0 AND date between '2011-03-01' and '2011-04-31') as num_pos_scores,
-    (SELECT Count(*) FROM assessments WHERE score < 0 AND date between '2011-03-01' and '2011-04-31') as num_neg_scores
-FROM assessments asd
-GROUP BY num_pos_scores AND num_neg_scores
+    (SELECT Count(*) FROM assessments WHERE score >= 0 AND date BETWEEN '2011-03-01' AND '2011-04-31') AS num_pos_scores,
+    (SELECT Count(*) FROM assessments WHERE score < 0 AND date BETWEEN '2011-03-01' AND '2011-04-31') AS num_neg_scores
+	FROM assessments asd
+	GROUP BY num_pos_scores AND num_neg_scores
+```
+
+##### 2)
+#### Answer:
+```MySQL
+SELECT *
+    FROM assessments
+	WHERE score >= 0
+	AND date BETWEEN '2011-01-01' AND '2011-04-30'
 ```
 
 ### NodeJS, Python, Golang, or PHP (20)
