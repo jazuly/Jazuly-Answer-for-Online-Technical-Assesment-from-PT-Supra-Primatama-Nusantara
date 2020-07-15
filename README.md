@@ -1,18 +1,23 @@
 # biznetAnswerJazuly
-# Shell (10)
-### 1) Create a single line script that returns the number of httpd processes that are running on the current machine?
-## Answer:
+### Shell (10)
+##### 1) Create a single line script that returns the number of httpd processes that are running on the current machine?
+#### Answer:
+```shell
 ps -eo comm,etime,user | grep apache2
+```
 
-### 2) From the current folder (/tmp), provide some bash commands that will rename all the *.txt files in mig33/inner_folder/ to *.dat?
-## Answer:
+##### 2) From the current folder (/tmp), provide some bash commands that will rename all the *.txt files in mig33/inner_folder/ to *.dat?
+#### Answer:
+```shell
 for file in /tmp/mig33/inner.folder/*.txt; do mv "$file" "${file%.txt}.dat"; done
+```
 
-# SQL (15)
+### SQL (15)
 
-# NodeJS, Python, Golang, or PHP (20)
-### 1) Write a function which, taking in a positive integer n as input, returns an array of all primes lower than n.
-## Answer:
+### NodeJS, Python, Golang, or PHP (20)
+##### 1) Write a function which, taking in a positive integer n as input, returns an array of all primes lower than n.
+#### Answer:
+```php
 function isPrime($n) 
 { 
     if ($n <= 1) 
@@ -35,13 +40,21 @@ function printPrime($n)
 }
 
 printPrime(10);
+```
 
-# JavaScript (30)
-### We have a data service returning json data from another server (Server to Server), you get json-encoded as:
+### JavaScript (30)
+##### We have a data service returning json data from another server (Server to Server), you get json-encoded as:
+```javascript
 [{"username":"ali","hair_color":"brown","height":1.2},{"username":"marc","hair_color":"blue","height":1.4},{"username":"joe","hair_color":"brown","height":1.7},{"username":"zehua","hair_color":"black","height":1.8}]
-### In an effort to reduce transfer size, we want to transfer the data in the following json format instead:
+```
+
+##### In an effort to reduce transfer size, we want to transfer the data in the following json format instead:
+```javascript
 {"h":["username","hair_color","height"],"d":[["ali","brown",1.2],["marc","blue",1.4],["joe","brown",1.7],["zehua","black",1.8]]}
-## Answer:
+```
+
+#### Answer:
+```javascript
 let jsn = '[{"username":"ali","hair_color":"brown","height":1.2}, {"username":"marc","hair_color":"blue","height":1.4},{"username":"joe","hair_color":"brown","height":1.7},{"username":"zehua","hair_color":"black","height":1.8}]';
 let obj = JSON.parse(jsn);
 let key = null;
@@ -53,3 +66,4 @@ obj.forEach((value) => {
 })
 
 let rst = { h: key, d: val };
+```
