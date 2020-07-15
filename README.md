@@ -13,6 +13,15 @@ for file in /tmp/mig33/inner.folder/*.txt; do mv "$file" "${file%.txt}.dat"; don
 ```
 
 ### SQL (15)
+##### 1) Provide a mysql select statement to return the following resultset structure:
+#### Answer:
+```MySQL
+SELECT 'day',
+    (SELECT Count(*) FROM assessments WHERE score >= 0 AND date between '2011-03-01' and '2011-04-31') as num_pos_scores,
+    (SELECT Count(*) FROM assessments WHERE score < 0 AND date between '2011-03-01' and '2011-04-31') as num_neg_scores
+FROM assessments asd
+GROUP BY num_pos_scores AND num_neg_scores
+```
 
 ### NodeJS, Python, Golang, or PHP (20)
 ##### 1) Write a function which, taking in a positive integer n as input, returns an array of all primes lower than n.
