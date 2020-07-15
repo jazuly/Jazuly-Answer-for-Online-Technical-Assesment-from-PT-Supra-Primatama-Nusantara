@@ -1,4 +1,4 @@
-# biznetAnswerJazuly
+# *Jazuly* Answer for Online Technical Assesment from PT. Supra Primatama Nusantara
 ### Shell (10)
 ##### 1) Create a single line script that returns the number of httpd processes that are running on the current machine?
 #### Answer:
